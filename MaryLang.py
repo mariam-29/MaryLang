@@ -11,7 +11,7 @@ TT_DIV = "TT_DIV"  # DIDNT MENTION TOO IG
 TT_LPAREN = "TT_LPAREN"
 TT_RPAREN = "TT_RPAREN"
 TT_STRING = "TT_STRING"  # DIDNT MENTIONED IN THE VID BUT WE SUPPOSED TO WORK ON IT
-######################## ERRORS CLASS #####################################################################
+######################## errors CLASS #####################################################################
 ###################################################################################################################
 class errors:
     def __init__(self, error_name, details):
@@ -35,7 +35,7 @@ class Tokens :
         if self.value is not None  : return f'({self.type}, {self.value})'
         return f'({self.type})'
 
-############# LEXER CLASS #######################
+############# lexer CLASS #######################
 ##############################################
 class Lexer:
     def __init__(self, text):
@@ -130,7 +130,7 @@ class BinOpNode:
         return f'({self.leftN} {self.OpTok} {self.rightN})'
 
 ###################################################################################################################
-######## PARSER CLASS ######################3
+######## parser CLASS ######################3
 class Parser:
     def __init__(self, tokens):
         self.currentTok = None
@@ -235,4 +235,7 @@ class Interpreter:
             else :
                 return "Division by zero"
         return None
+
+#
+
 
